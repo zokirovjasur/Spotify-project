@@ -97,9 +97,9 @@ const initialState = {
       id: "1Xyo4u8uXC1ZmMpatF05PJ",
       src: Weeknd,
       title: "Starboy",
-      time:230,
+      time: 230,
     },
-  ]
+  ],
 };
 
 export const Context = createContext();
@@ -108,15 +108,15 @@ const reducer = (state = initialState, actions) => {
   const { type, payload } = actions;
   switch (type) {
     case "SET_ARTISTS":
-      return {...state, artists: payload}
+      return { ...state, artists: payload };
     case "SET_AUDIO":
-      return {...state, audio: payload.audio, audio_id: payload.id}
+      return { ...state, audio: payload.audio, audio_id: payload.id };
     case "SET_ACTION":
-      return {...state, action: payload}
+      return { ...state, action: payload };
     case "SET_CURRENTTIME":
-      return {...state, currentTime: payload}
+      return { ...state, currentTime: payload };
     default:
-      return {state}
+      return { state };
   }
 };
 
